@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
+
+<head>
+  <!--====== Required meta tags ======-->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!--====== Title ======-->
+  <title>Trans Czech</title>
+
+  <!--====== Favicon Icon ======-->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg" />
+
+  <!--====== Bootstrap css ======-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+
+  <!--====== Line Icons css ======-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/lineicons.css') }}" />
+
+  <!--====== Tiny Slider css ======-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tiny-slider.css') }}" />
+
+  <!--====== gLightBox css ======-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/glightbox.min.css') }}" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <!--====== NAVBAR NINE PART START ======-->
+  <section class="navbar-area navbar-nine">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+              <img src="{{ url_for('static', filename='images/white-logo.svg') }}" alt="Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
+              aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="page-scroll active" href="#hero-area">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="#pricing">Pricing</a>
+                </li>
+                <li id="language-switcher-container"></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--====== NAVBAR NINE PART ENDS ======-->
+
+
+  <!-- Start header Area -->
+  <section id="hero-area" class="header-area header-eight">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-md-12 col-12">
+          <div class="header-content">
+            <h1>Safe & Reliable Transportation Services in Prague and Czech Republic</h1>
+            <p>
+              Professional transportation services for all your needs - from airport transfers to corporate events. Available 24/7,
+              ensuring comfortable and punctual rides across Prague and beyond.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-12">
+          <div class="header-image">
+            <img src="assets/images/header/hero-image.jpg" alt="#" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End header Area -->
+
+
+  <!-- ========================= contact-section start ========================= -->
+  <section id="contact" class="contact-section">
+    <!--======  Start Section Title Five ======-->
+    <div class="section-title-five">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <h6>Contact</h6>
+              <h2 class="fw-bold">Contact Information</h2>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!--======  End Section Title Five ======-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="contact-item-wrapper">
+            <div class="row justify-content-center">
+              <!-- Contact -->
+              <div class="col-12 col-md-4">
+                <div class="contact-item text-center p-4 h-100 bg-white rounded-lg shadow-sm">
+                  <div class="contact-icon mb-3">
+                    <i class="lni lni-phone text-primary" style="font-size: 2rem;"></i>
+                  </div>
+                  <div class="contact-content">
+                    <h4>Contact</h4>
+                    <p>+420 777 888 999</p>
+                    <p>info@transprague.cz</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="col-12 col-md-4">
+                <div class="contact-item text-center p-4 h-100 bg-white rounded-lg shadow-sm">
+                  <div class="contact-icon mb-3">
+                    <i class="lni lni-map-marker text-primary" style="font-size: 2rem;"></i>
+                  </div>
+                  <div class="contact-content">
+                    <h4>Address</h4>
+                    <p>Václavské náměstí 1</p>
+                    <p>110 00 Prague 1</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Schedule -->
+              <div class="col-12 col-md-4">
+                <div class="contact-item text-center p-4 h-100 bg-white rounded-lg shadow-sm">
+                  <div class="contact-icon mb-3">
+                    <i class="lni lni-alarm-clock text-primary" style="font-size: 2rem;"></i>
+                  </div>
+                  <div class="contact-content">
+                    <h4>Hours</h4>
+                    <p>24/7 Available</p>
+                    <p>Office: 8 AM - 8 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================= contact-section end ========================= -->
+
+  <style>
+    .contact-section {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+  
+    .contact-item {
+      transition: transform 0.3s ease;
+    }
+  
+    .contact-item:hover {
+      transform: translateY(-5px);
+    }
+  
+    @media (max-width: 768px) {
+      .contact-item {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+
+  <!-- ===== service-area start ===== -->
+  <section id="services" class="services-area services-eight">
+    <!--======  Start Section Title Five ======-->
+    <div class="section-title-five">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <h6>Services</h6>
+              <h2 class="fw-bold">Our Services</h2>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!--======  End Section Title Five ======-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-icon">
+              <i class="lni lni-capsule"></i>
+            </div>
+            <div class="service-content">
+              <h4>Taxi Services</h4>
+              <p>
+                Professional taxi service available 24/7. Comfortable vehicles and experienced drivers for safe city travels.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-icon">
+              <i class="lni lni-bootstrap"></i>
+            </div>
+            <div class="service-content">
+              <h4>Corporate Transfers</h4>
+              <p>
+                Reliable transportation for business professionals. Executive vehicles and priority service for corporate clients.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-icon">
+              <i class="lni lni-shortcode"></i>
+            </div>
+            <div class="service-content">
+              <h4>Airport Transfers</h4>
+              <p>
+                Punctual airport pickup and drop-off services. Flight monitoring and waiting time included.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-icon">
+              <i class="lni lni-dashboard"></i>
+            </div>
+            <div class="service-content">
+              <h4>Party Transfers</h4>
+              <p>
+                Safe transportation for your night out. Group vehicles available for parties and events.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-icon">
+              <i class="lni lni-layers"></i>
+            </div>
+            <div class="service-content">
+              <h4>Parcel Delivery</h4>
+              <p>
+                Quick and secure parcel delivery service within the city. Real-time tracking available.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-icon">
+              <i class="lni lni-reload"></i>
+            </div>
+            <div class="service-content">
+              <h4>Group Tours</h4>
+              <p>
+                Customized transportation for tourist groups and sightseeing tours. Comfortable minibuses available.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== service-area end ===== -->
+
+
+  <!-- Start Pricing  Area -->
+  <section id="pricing" class="pricing-area pricing-fourteen">
+    <!--======  Start Section Title Five ======-->
+    <div class="section-title-five">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <h6>Pricing</h6>
+              <h2 class="fw-bold">Pricing & Plans</h2>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!--======  End Section Title Five ======-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="pricing-style-fourteen">
+            <div class="table-head">
+              <h6 class="title">Standard</h6>
+              <p>Perfect for occasional rides around the city</p>
+              <div class="price">
+                <h2 class="amount">
+                  <span class="currency">€</span>25<span class="duration">/ride </span>
+                </h2>
+              </div>
+            </div>
+
+            <!-- <div class="table-content">
+              <ul class="table-list">
+                <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
+                <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
+                <li> <i class="lni lni-checkmark-circle deactive"></i> Morbi leo risus.</li>
+                <li> <i class="lni lni-checkmark-circle deactive"></i> Excepteur sint occaecat velit.</li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="pricing-style-fourteen middle">
+            <div class="table-head">
+              <h6 class="title">Business</h6>
+              <p>Ideal for corporate clients and business travels</p>
+              <div class="price">
+                <h2 class="amount">
+                  <span class="currency">€</span>45<span class="duration">/ride </span>
+                </h2>
+              </div>
+            </div>
+
+            <!-- <div class="table-content">
+              <ul class="table-list">
+                <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
+                <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
+                <li> <i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
+                <li> <i class="lni lni-checkmark-circle deactive"></i> Excepteur sint occaecat velit.</li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="pricing-style-fourteen">
+            <div class="table-head">
+              <h6 class="title">VIP</h6>
+              <p>Luxury vehicles and premium service for special occasions</p>
+              <div class="price">
+                <h2 class="amount">
+                  <span class="currency">€</span>75<span class="duration">/ride </span>
+                </h2>
+              </div>
+            </div>
+
+            <!-- <div class="table-content">
+              <ul class="table-list">
+                <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
+                <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
+                <li> <i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
+                <li> <i class="lni lni-checkmark-circle"></i> Excepteur sint occaecat velit.</li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ End Pricing  Area -->
+
+
+  <!-- Start Brand Area -->
+  <div id="clients" class="brand-area section">
+    <!--======  Start Section Title Five ======-->
+    <div class="section-title-five">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <h6>Meet our Clients</h6>
+              <h2 class="fw-bold">Our Awesome Clients</h2>
+              <!-- <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form.
+              </p> -->
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!--======  End Section Title Five ======-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-12">
+          <div class="clients-logos">
+            <div class="single-image">
+              <img src="assets/images/client-logo/graygrids.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/images/client-logo/uideck.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/images/client-logo/ayroui.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/images/client-logo/lineicons.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/images/client-logo/tailwindtemplates.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/images/client-logo/ecomhtml.svg" alt="Brand Logo Images" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Brand Area -->
+
+  <!-- Start Footer Area -->
+  <footer class="footer-area footer-eleven">
+    <div class="footer-top">
+      <div class="container">
+        <div class="inner-content">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="footer-widget f-about">
+                <div class="logo">
+                  <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="#" class="img-fluid" />
+                  </a>
+                </div>
+                <p>
+                  Making the world a better place.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <a href="#" class="scroll-top btn-hover">
+    <i class="lni lni-chevron-up"></i>
+  </a>
+
+  <!--====== js ======-->
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/tiny-slider.js') }}"></script>
+  
+  <script>
+    //===== close navbar-collapse when a  clicked
+    let navbarTogglerNine = document.querySelector(
+      ".navbar-nine .navbar-toggler"
+    );
+    navbarTogglerNine.addEventListener("click", function () {
+      navbarTogglerNine.classList.toggle("active");
+    });
+  </script>
+  
+  <!-- React and ReactDOM -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  
+  <script src="{{ url_for('static', filename='js/translations.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/language-switcher.js') }}"></script>
+  <!-- Initialize Language Switcher -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('language-switcher-container');
+      if (container) {
+        ReactDOM.render(
+          React.createElement(LanguageSwitcher),
+          container
+        );
+      }
+    });
+  </script>
+</body>
+
+</html>
