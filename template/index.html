@@ -97,66 +97,42 @@
 
 
   <!-- ========================= contact-section start ========================= -->
-  <section id="contact" class="contact-section">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <h6>Contact</h6>
-              <h2 class="fw-bold">Contact Information</h2>
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <div class="contact-item-wrapper">
-            <div class="row justify-content-center">
-              <!-- Contact -->
-              <div class="col-12 col-md-4">
-                <div class="contact-item text-center p-4 h-100 bg-white rounded-lg shadow-sm">
-                  <div class="contact-icon mb-3">
-                    <i class="lni lni-phone text-primary" style="font-size: 2rem;"></i>
-                  </div>
-                  <div class="contact-content">
-                    <h4>Contact</h4>
-                    <p>+420 777 888 999</p>
-                    <p>info@transprague.cz</p>
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="contact-item-wrapper">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+              <div class="row align-items-stretch">
+                <!-- Contact Info Card -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                  <div class="contact-item text-center p-4 h-100 bg-white rounded-lg shadow-sm position-relative">
+                    <div class="contact-icon mb-3">
+                      <i class="lni lni-phone text-primary" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="contact-content">
+                      <h4>Contact Information</h4>
+                      <p>+420 777 888 999</p>
+                      <p>info@transprague.cz</p>
+                      <p>24/7 Available</p>
+                    </div>
+                    <!-- Copy Button positioned at bottom-right of contact card -->
+                    <!-- <button onclick="copyPhoneNumber()" class="btn btn-light position-absolute"
+                      style="bottom: 0.5rem; right: 0.5rem;">
+                      <i class="lni lni-copy"></i>
+                    </button> -->
                   </div>
                 </div>
-              </div>
 
-              <!-- Address -->
-              <div class="col-12 col-md-4">
-                <div class="contact-item text-center p-4 h-100 bg-white rounded-lg shadow-sm">
-                  <div class="contact-icon mb-3">
-                    <i class="lni lni-map-marker text-primary" style="font-size: 2rem;"></i>
-                  </div>
-                  <div class="contact-content">
-                    <h4>Address</h4>
-                    <p>Václavské náměstí 1</p>
-                    <p>110 00 Prague 1</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Schedule -->
-              <div class="col-12 col-md-4">
-                <div class="contact-item text-center p-4 h-100 bg-white rounded-lg shadow-sm">
-                  <div class="contact-icon mb-3">
-                    <i class="lni lni-alarm-clock text-primary" style="font-size: 2rem;"></i>
-                  </div>
-                  <div class="contact-content">
-                    <h4>Hours</h4>
-                    <p>24/7 Available</p>
-                    <p>Office: 8 AM - 8 PM</p>
+                <!-- Call Now Button -->
+                <div class="col-12 col-md-6">
+                  <div class="h-100">
+                    <a href="tel:+420777888999"
+                      class="btn btn-primary d-flex flex-column align-items-center justify-content-center h-100 rounded-lg shadow-sm">
+                      <i class="lni lni-phone mb-2" style="font-size: 2rem;"></i>
+                      <span class="fs-4">Call Now</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -165,7 +141,25 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- <script>
+  function copyPhoneNumber() {
+    navigator.clipboard.writeText('+420777888999')
+      .then(() => {
+        const btn = event.target.closest('button');
+        const originalIcon = btn.innerHTML;
+        btn.innerHTML = '<i class="lni lni-checkmark"></i>';
+        setTimeout(() => {
+          btn.innerHTML = originalIcon;
+        }, 2000);
+      })
+      .catch(err => {
+        console.error('Failed to copy:', err);
+      });
+  }
+</script> -->
   <!-- ========================= contact-section end ========================= -->
 
   <style>
