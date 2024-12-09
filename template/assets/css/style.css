@@ -330,18 +330,18 @@ p {
   text-align: center;
   max-width: 550px;
   margin: auto;
-  margin-bottom: 50px;
+  margin-bottom: 0;
   position: relative;
   z-index: 5;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-title-five {
-    margin-bottom: 45px;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 767px) {
   .section-title-five {
-    margin-bottom: 35px;
+    margin-bottom: 0;
   }
 }
 .section-title-five h6 {
@@ -1152,16 +1152,20 @@ p {
   services css 
 ===========================*/
 .services-eight {
-  padding: 100px 0;
+  padding-top: 300px;
+  padding: 40px;
 }
+
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .services-eight {
-    padding: 80px 0 50px 0;
+    padding: 30px;
   }
 }
 @media (max-width: 767px) {
   .services-eight {
-    padding: 60px 0 30px 0;
+    padding: 30px;
   }
 }
 .services-eight .single-services {
@@ -1313,26 +1317,41 @@ p {
 
 /*===== PRICING THIRTEEN =====*/
 .pricing-fourteen {
-  padding: 100px 0;
+  padding: 40px 0;
   background-color: var(--light-3);
 }
+
+.pricing-fourteen .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pricing-fourteen .col-lg-4 {
+  display: flex;
+  padding-bottom: 25px;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .pricing-fourteen {
-    padding: 80px;
+    padding: 30px;
   }
 }
 @media (max-width: 767px) {
   .pricing-fourteen {
-    padding: 60px 0;
+    padding: 30px 0;
   }
 }
 .pricing-style-fourteen {
+  width: 100%;
+  /* This ensures the card takes full width of its column */
+  height: 100%;
+  /* This makes all cards same height */
   border: 1px solid var(--light-1);
   border-radius: 10px;
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: var(--white);
   transition: all 0.4s ease;
-  padding: 50px 35px;
+  padding: 20px 35px;
   text-align: center;
   z-index: 0;
 }
@@ -1371,11 +1390,11 @@ p {
   font-size: 55px;
 }
 .pricing-style-fourteen .currency {
-  font-weight: 400;
+  font-weight: 500;
   color: var(--dark-3);
   font-size: 20px;
   position: absolute;
-  left: 0;
+  left: -30px;
   top: 6px;
 }
 .pricing-style-fourteen .duration {
@@ -1390,10 +1409,13 @@ p {
   margin-bottom: 40px;
 }
 .pricing-style-fourteen .table-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   position: relative;
   margin-bottom: 10px;
   color: var(--dark-3);
-  text-align: left;
 }
 .pricing-style-fourteen .table-list li:last-child {
   margin: 0;
@@ -1623,16 +1645,16 @@ p {
 .contact-section {
   position: relative;
   z-index: 3;
-  padding-top: 100px;
+  padding-top: 20px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .contact-section {
-    padding-top: 80px;
+    padding-top: 10px;
   }
 }
 @media (max-width: 767px) {
   .contact-section {
-    padding-top: 60px;
+    padding-top: 10px;
   }
 }
 .contact-section .contact-item-wrapper .contact-item {
@@ -1640,13 +1662,13 @@ p {
   border: 1px solid var(--gray-4);
   border-radius: 10px;
   background: var(--white);
-  margin-bottom: 30px;
-  padding: 20px 30px;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  margin-bottom: 10px;
+  padding: 20px;
+  min-height: 160px;
+  /* Add minimum height */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 .contact-section .contact-item-wrapper .contact-item:hover {
   box-shadow: var(--shadow-4);
@@ -1654,20 +1676,24 @@ p {
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .contact-section .contact-item-wrapper .contact-item {
     padding: 20px;
+    justify-content: center;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .contact-section .contact-item-wrapper .contact-item {
-    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
   }
 }
 @media (max-width: 767px) {
   .contact-section .contact-item-wrapper .contact-item {
-    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
   }
 }
 .contact-section .contact-item-wrapper .contact-item .contact-icon {
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   font-size: 22px;
@@ -1692,14 +1718,12 @@ p {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .contact-section .contact-item-wrapper .contact-item .contact-content {
-    margin-left: 0px;
-    margin-top: 20px;
+    margin-left: 20px;
   }
 }
 @media (max-width: 767px) {
   .contact-section .contact-item-wrapper .contact-item .contact-content {
-    margin-left: 0px;
-    margin-top: 20px;
+    margin-left: 20px;
   }
 }
 .contact-section .contact-item-wrapper .contact-item .contact-content h4 {

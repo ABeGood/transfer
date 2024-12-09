@@ -55,10 +55,10 @@
                   <a class="page-scroll" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#services">Services</a>
+                  <a class="page-scroll" href="#pricing">Pricing</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#pricing">Pricing</a>
+                  <a class="page-scroll" href="#services">Services</a>
                 </li>
                 <li id="language-switcher-container"></li>
               </ul>
@@ -87,7 +87,7 @@
         </div>
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-image">
-            <img src="assets/images/header/hero-image.jpg" alt="#" />
+            <img src="assets/images/header/hero-image.png" alt="#" />
           </div>
         </div>
       </div>
@@ -102,39 +102,30 @@
     <div class="row justify-content-center">
       <div class="col-12">
         <div class="contact-item-wrapper">
-          <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-              <div class="row align-items-stretch">
-                <!-- Contact Info Card -->
-                <div class="col-12 col-md-6 mb-4 mb-md-0">
-                  <div class="contact-item text-center p-4 h-100 bg-white rounded-lg shadow-sm position-relative">
-                    <div class="contact-icon mb-3">
-                      <i class="lni lni-phone text-primary" style="font-size: 2rem;"></i>
-                    </div>
-                    <div class="contact-content">
-                      <h4>Contact Information</h4>
-                      <p>+420 777 888 999</p>
-                      <p>info@transprague.cz</p>
-                      <p>24/7 Available</p>
-                    </div>
-                    <!-- Copy Button positioned at bottom-right of contact card -->
-                    <!-- <button onclick="copyPhoneNumber()" class="btn btn-light position-absolute"
-                      style="bottom: 0.5rem; right: 0.5rem;">
-                      <i class="lni lni-copy"></i>
-                    </button> -->
-                  </div>
+          <div class="row align-items-stretch">
+            <!-- Contact Info Card -->
+            <div class="col-12 col-md-6 mb-3">
+              <div class="contact-item d-flex h-100">
+                <div class="contact-icon">
+                  <i class="lni lni-phone text-primary" style="font-size: 2rem;"></i>
                 </div>
+                <div class="contact-content">
+                  <h4>Contact Information</h4>
+                  <p>+420 777 888 999</p>
+                  <p>info@transprague.cz</p>
+                  <p>24/7 Available</p>
+                </div>
+              </div>
+            </div>
 
-                <!-- Call Now Button -->
-                <div class="col-12 col-md-6">
-                  <div class="h-100">
-                    <a href="tel:+420777888999"
-                      class="btn btn-primary d-flex flex-column align-items-center justify-content-center h-100 rounded-lg shadow-sm">
-                      <i class="lni lni-phone mb-2" style="font-size: 2rem;"></i>
-                      <span class="fs-4">Call Now</span>
-                    </a>
-                  </div>
-                </div>
+            <!-- Call Now Button -->
+            <div class="col-12 col-md-6 mb-3">
+              <div class="contact-item h-100">
+                <a href="tel:+420777888999"
+                  class="d-flex flex-column align-items-center justify-content-center h-100 w-100 text-decoration-none">
+                  <i class="lni lni-phone mb-2 text-primary" style="font-size: 2rem;"></i>
+                  <span class="fs-4 text-primary fw-bold">CALL NOW</span>
+                </a>
               </div>
             </div>
           </div>
@@ -162,26 +153,83 @@
 </script> -->
   <!-- ========================= contact-section end ========================= -->
 
-  <style>
-    .contact-section {
-      padding: 60px 0;
-      background-color: #f8f9fa;
-    }
-  
-    .contact-item {
-      transition: transform 0.3s ease;
-    }
-  
-    .contact-item:hover {
-      transform: translateY(-5px);
-    }
-  
-    @media (max-width: 768px) {
-      .contact-item {
-        margin-bottom: 20px;
-      }
-    }
-  </style>
+
+  <!-- Start Pricing  Area -->
+  <section id="pricing" class="pricing-area pricing-fourteen">
+    <!--======  Start Section Title Five ======-->
+    <div class="section-title-five">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <h2 class="fw-bold">Pricing</h2>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!--======  End Section Title Five ======-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="pricing-style-fourteen">
+            <div class="table-head">
+              <h6 class="title">Pickup fee</h6>
+              <p>Initial pickup charge</p>
+              <div class="price">
+                <h2 class="amount">
+                  <span class="currency">CZK</span>60<span class="duration">/ride </span>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="pricing-style-fourteen middle">
+            <div class="table-head">
+              <h6 class="title">Ride</h6>
+              <p>Payment for the ride itself</p>
+              <div class="price">
+                <h2 class="amount">
+                  <span class="currency">CZK</span>36<span class="duration">/km </span>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="pricing-style-fourteen">
+            <div class="table-head">
+              <h6 class="title">Waiting</h6>
+              <p>If you don't want to call taxi again we can wait for you</p>
+              <div class="price">
+                <h2 class="amount">
+                  <span class="currency">CZK</span>7<span class="duration">/min </span>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Centered list section -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="table-content">
+            <ul class="table-list">
+              <li class="text-center"><i class="lni lni-checkmark-circle"></i> Payment by cards and cash.</li>
+              <li class="text-center"><i class="lni lni-checkmark-circle"></i> Payment in CZK, EUR and USD.</li>
+              <li class="text-center"><i class="lni lni-checkmark-circle"></i> Payment by invoice and Corporate billing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ End Pricing  Area -->
+
 
   <!-- ===== service-area start ===== -->
   <section id="services" class="services-area services-eight">
@@ -191,7 +239,6 @@
         <div class="row">
           <div class="col-12">
             <div class="content">
-              <h6>Services</h6>
               <h2 class="fw-bold">Our Services</h2>
             </div>
           </div>
@@ -205,9 +252,6 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-capsule"></i>
-            </div>
             <div class="service-content">
               <h4>Taxi Services</h4>
               <p>
@@ -218,9 +262,6 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-bootstrap"></i>
-            </div>
             <div class="service-content">
               <h4>Corporate Transfers</h4>
               <p>
@@ -231,9 +272,6 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-shortcode"></i>
-            </div>
             <div class="service-content">
               <h4>Airport Transfers</h4>
               <p>
@@ -242,11 +280,47 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="section-title-five">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <h2 class="fw-bold">Taxi PLUS</h2>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+
+    <div class="container">
+      <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-dashboard"></i>
+            <div class="service-content">
+              <h4>Parcel Delivery</h4>
+              <p>
+                Quick and secure parcel delivery service within the city.
+              </p>
             </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-content">
+              <h4>Group Tours</h4>
+              <p>
+                Customized transportation for tourist groups and sightseeing tours.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
             <div class="service-content">
               <h4>Party Transfers</h4>
               <p>
@@ -257,26 +331,53 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-layers"></i>
-            </div>
             <div class="service-content">
-              <h4>Parcel Delivery</h4>
+              <h4>Fuel delivery</h4>
               <p>
-                Quick and secure parcel delivery service within the city. Real-time tracking available.
+                Ran out of fuel? We'll deliver fuel to your location quickly. Available 24/7 throughout Prague and surrounding areas.
               </p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-reload"></i>
-            </div>
             <div class="service-content">
-              <h4>Group Tours</h4>
+              <h4>Flat tire fix</h4>
               <p>
-                Customized transportation for tourist groups and sightseeing tours. Comfortable minibuses available.
+                Professional tire change service at your location. We'll replace your flat tire with a spare or help you get to a repair
+                shop.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-content">
+              <h4>Emergency towing</h4>
+              <p>
+                Fast and reliable towing service for broken down vehicles. Professional equipment and experienced operators available
+                24/7.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-content">
+              <h4>Jump start assistance</h4>
+              <p>
+                Quick help for dead car batteries. Our team will arrive with professional jump start equipment to get you back on the
+                road.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-content">
+              <h4>Medicine delivery</h4>
+              <p>
+                Urgent medicine delivery service from pharmacies to your location. Fast, reliable and handled with care.
               </p>
             </div>
           </div>
@@ -285,150 +386,6 @@
     </div>
   </section>
   <!-- ===== service-area end ===== -->
-
-
-  <!-- Start Pricing  Area -->
-  <section id="pricing" class="pricing-area pricing-fourteen">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <h6>Pricing</h6>
-              <h2 class="fw-bold">Pricing & Plans</h2>
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen">
-            <div class="table-head">
-              <h6 class="title">Standard</h6>
-              <p>Perfect for occasional rides around the city</p>
-              <div class="price">
-                <h2 class="amount">
-                  <span class="currency">€</span>25<span class="duration">/ride </span>
-                </h2>
-              </div>
-            </div>
-
-            <!-- <div class="table-content">
-              <ul class="table-list">
-                <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                <li> <i class="lni lni-checkmark-circle deactive"></i> Morbi leo risus.</li>
-                <li> <i class="lni lni-checkmark-circle deactive"></i> Excepteur sint occaecat velit.</li>
-              </ul>
-            </div> -->
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen middle">
-            <div class="table-head">
-              <h6 class="title">Business</h6>
-              <p>Ideal for corporate clients and business travels</p>
-              <div class="price">
-                <h2 class="amount">
-                  <span class="currency">€</span>45<span class="duration">/ride </span>
-                </h2>
-              </div>
-            </div>
-
-            <!-- <div class="table-content">
-              <ul class="table-list">
-                <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
-                <li> <i class="lni lni-checkmark-circle deactive"></i> Excepteur sint occaecat velit.</li>
-              </ul>
-            </div> -->
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen">
-            <div class="table-head">
-              <h6 class="title">VIP</h6>
-              <p>Luxury vehicles and premium service for special occasions</p>
-              <div class="price">
-                <h2 class="amount">
-                  <span class="currency">€</span>75<span class="duration">/ride </span>
-                </h2>
-              </div>
-            </div>
-
-            <!-- <div class="table-content">
-              <ul class="table-list">
-                <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Excepteur sint occaecat velit.</li>
-              </ul>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ End Pricing  Area -->
-
-
-  <!-- Start Brand Area -->
-  <div id="clients" class="brand-area section">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <h6>Meet our Clients</h6>
-              <h2 class="fw-bold">Our Awesome Clients</h2>
-              <!-- <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
-              </p> -->
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-12">
-          <div class="clients-logos">
-            <div class="single-image">
-              <img src="assets/images/client-logo/graygrids.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/uideck.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/ayroui.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/lineicons.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/tailwindtemplates.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/ecomhtml.svg" alt="Brand Logo Images" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Brand Area -->
 
   <!-- Start Footer Area -->
   <footer class="footer-area footer-eleven">
@@ -443,9 +400,6 @@
                     <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="#" class="img-fluid" />
                   </a>
                 </div>
-                <p>
-                  Making the world a better place.
-                </p>
               </div>
             </div>
           </div>
