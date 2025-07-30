@@ -92,7 +92,7 @@ const translations = {
             callNow: 'CALL NOW'
         },
         navigation: {
-            home: 'Home',
+            'hero-area': 'Home',  // Fixed: match the actual href
             contact: 'Contact',
             pricing: 'Pricing',
             services: 'Services'
@@ -191,7 +191,7 @@ const translations = {
             callNow: 'ZAVOLEJTE NYNÍ'
         },
         navigation: {
-            home: 'Domů',
+            'hero-area': 'Domů',  // Fixed: match the actual href
             contact: 'Kontakt',
             pricing: 'Ceník',
             services: 'Služby'
@@ -290,7 +290,7 @@ const translations = {
             callNow: 'ПОЗВОНИТЬ СЕЙЧАС'
         },
         navigation: {
-            home: 'Главная',
+            'hero-area': 'Главная',  // Fixed: match the actual href
             contact: 'Контакты',
             pricing: 'Цены',
             services: 'Услуги'
@@ -302,10 +302,10 @@ const translations = {
 function handleLanguage() {
     // Get language from URL parameter, default to Czech
     const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || 'cs'; // Changed from 'en' to 'cs'
+    const lang = urlParams.get('lang') || 'cs';
 
     // Get translation for current language
-    const currentTranslations = translations[lang] || translations.cs; // Changed fallback from translations.en to translations.cs
+    const currentTranslations = translations[lang] || translations.cs;
 
     // Update content
     function updateContent() {
@@ -325,25 +325,25 @@ function handleLanguage() {
         // Update main services section
         document.querySelector('#services .section-title-five h2').textContent = currentTranslations.services.title;
 
-        // Update main service items (first three services)
-        const serviceItems = document.querySelectorAll('#services .single-services');
+        // Update main service items - FIXED: target .unified-card instead of .single-services
+        const serviceItems = document.querySelectorAll('#services .unified-card');
 
         // Taxi Services
         if (serviceItems[0]) {
-            serviceItems[0].querySelector('.service-content h4').textContent = currentTranslations.services.taxi.title;
-            serviceItems[0].querySelector('.service-content p').textContent = currentTranslations.services.taxi.description;
+            serviceItems[0].querySelector('.card-title').textContent = currentTranslations.services.taxi.title;
+            serviceItems[0].querySelector('.card-content').textContent = currentTranslations.services.taxi.description;
         }
 
         // Corporate Transfers
         if (serviceItems[1]) {
-            serviceItems[1].querySelector('.service-content h4').textContent = currentTranslations.services.corporate.title;
-            serviceItems[1].querySelector('.service-content p').textContent = currentTranslations.services.corporate.description;
+            serviceItems[1].querySelector('.card-title').textContent = currentTranslations.services.corporate.title;
+            serviceItems[1].querySelector('.card-content').textContent = currentTranslations.services.corporate.description;
         }
 
         // Airport Transfers
         if (serviceItems[2]) {
-            serviceItems[2].querySelector('.service-content h4').textContent = currentTranslations.services.airport.title;
-            serviceItems[2].querySelector('.service-content p').textContent = currentTranslations.services.airport.description;
+            serviceItems[2].querySelector('.card-title').textContent = currentTranslations.services.airport.title;
+            serviceItems[2].querySelector('.card-content').textContent = currentTranslations.services.airport.description;
         }
 
         // Update Taxi PLUS section title
@@ -367,8 +367,8 @@ function handleLanguage() {
         taxiPlusServices.forEach(({ index, key }) => {
             const serviceEl = serviceItems[index];
             if (serviceEl && currentTranslations.taxiPlus[key]) {
-                serviceEl.querySelector('.service-content h4').textContent = currentTranslations.taxiPlus[key].title;
-                serviceEl.querySelector('.service-content p').textContent = currentTranslations.taxiPlus[key].description;
+                serviceEl.querySelector('.card-title').textContent = currentTranslations.taxiPlus[key].title;
+                serviceEl.querySelector('.card-content').textContent = currentTranslations.taxiPlus[key].description;
             }
         });
 
