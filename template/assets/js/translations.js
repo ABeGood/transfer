@@ -87,7 +87,7 @@ const translations = {
         contact: {
             title: 'Contact Information',
             phone: '+420 777 888 999',
-            email: 'info@transprague.cz',
+            email: 'info@taxipraga.cz',
             availability: '24/7 Available',
             callNow: 'CALL NOW'
         },
@@ -186,7 +186,7 @@ const translations = {
         contact: {
             title: 'Kontaktní informace',
             phone: '+420 777 888 999',
-            email: 'info@transprague.cz',
+            email: 'info@taxipraga.cz',
             availability: 'K dispozici 24/7',
             callNow: 'ZAVOLEJTE NYNÍ'
         },
@@ -285,7 +285,7 @@ const translations = {
         contact: {
             title: 'Контактная информация',
             phone: '+420 777 888 999',
-            email: 'info@transprague.cz',
+            email: 'info@taxipraga.cz',
             availability: 'Доступно 24/7',
             callNow: 'ПОЗВОНИТЬ СЕЙЧАС'
         },
@@ -375,13 +375,7 @@ function handleLanguage() {
         // Update pricing section
         document.querySelector('#pricing .section-title-five h2').textContent = currentTranslations.pricing.title;
 
-        // Update pricing section title
-        const pricingTitle = document.querySelector('#pricing .section-title-five h2');
-        if (pricingTitle) {
-            pricingTitle.textContent = currentTranslations.pricing.title;
-        }
-
-        // Update pricing cards
+        // Update pricing cards with proper translations including duration
         const pricingCards = document.querySelectorAll('#pricing .pricing-style-fourteen');
 
         // Pickup fee
@@ -391,7 +385,7 @@ function handleLanguage() {
             card.querySelector('.table-head p').textContent = currentTranslations.pricing.pickup.subtitle;
             card.querySelector('.price').innerHTML = `
                 <h2 class="amount">
-                    <span class="currency">CZK</span>60<span class="duration">/ride </span>
+                    <span class="currency">${currentTranslations.pricing.pickup.currency}</span>${currentTranslations.pricing.pickup.amount}<span class="duration">${currentTranslations.pricing.pickup.duration}</span>
                 </h2>
             `;
         }
@@ -403,7 +397,7 @@ function handleLanguage() {
             card.querySelector('.table-head p').textContent = currentTranslations.pricing.ride.subtitle;
             card.querySelector('.price').innerHTML = `
                 <h2 class="amount">
-                    <span class="currency">CZK</span>36<span class="duration">/km </span>
+                    <span class="currency">${currentTranslations.pricing.ride.currency}</span>${currentTranslations.pricing.ride.amount}<span class="duration">${currentTranslations.pricing.ride.duration}</span>
                 </h2>
             `;
         }
@@ -415,7 +409,7 @@ function handleLanguage() {
             card.querySelector('.table-head p').textContent = currentTranslations.pricing.waiting.subtitle;
             card.querySelector('.price').innerHTML = `
                 <h2 class="amount">
-                    <span class="currency">CZK</span>7<span class="duration">/min </span>
+                    <span class="currency">${currentTranslations.pricing.waiting.currency}</span>${currentTranslations.pricing.waiting.amount}<span class="duration">${currentTranslations.pricing.waiting.duration}</span>
                 </h2>
             `;
         }
@@ -433,14 +427,14 @@ function handleLanguage() {
         if (contactContent) {
             contactContent.innerHTML = `
                 <h4>${currentTranslations.contact.title}</h4>
-                ${currentTranslations.contact.phone}<br>
-                ${currentTranslations.contact.email}<br>
-                ${currentTranslations.contact.availability}
+                <p>${currentTranslations.contact.phone}</p>
+                <p>${currentTranslations.contact.email}</p>
+                <p>${currentTranslations.contact.availability}</p>
             `;
         }
 
         // Update call now button
-        const callNowButton = document.querySelector('#contact .contact-item a .fs-4');
+        const callNowButton = document.querySelector('#contact .contact-item a .fs-3');
         if (callNowButton) {
             callNowButton.textContent = currentTranslations.contact.callNow;
         }
