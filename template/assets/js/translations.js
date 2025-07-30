@@ -86,7 +86,7 @@ const translations = {
         },
         contact: {
             title: 'Contact Information',
-            phone: '+420 777 888 999',
+            phone: '+420 727 812 691',
             email: 'info@taxipraga.cz',
             availability: '24/7 Available',
             callNow: 'CALL NOW'
@@ -185,7 +185,7 @@ const translations = {
         },
         contact: {
             title: 'Kontaktní informace',
-            phone: '+420 777 888 999',
+            phone: '+420 727 812 691',
             email: 'info@taxipraga.cz',
             availability: 'K dispozici 24/7',
             callNow: 'ZAVOLEJTE NYNÍ'
@@ -284,7 +284,7 @@ const translations = {
         },
         contact: {
             title: 'Контактная информация',
-            phone: '+420 777 888 999',
+            phone: '+420 727 812 691',
             email: 'info@taxipraga.cz',
             availability: 'Доступно 24/7',
             callNow: 'ПОЗВОНИТЬ СЕЙЧАС'

@@ -334,18 +334,21 @@ p {
   max-width: 550px;
   margin: auto;
   margin-bottom: 0;
+  padding-top: 40px;
   position: relative;
   z-index: 5;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-title-five {
     margin-bottom: 0;
+    padding-top: 40px;
   }
 }
 @media (max-width: 767px) {
   .section-title-five {
     color: var(--white);
     margin-bottom: 0;
+    padding-top: 40px;
   }
 }
 .section-title-five h6 {
@@ -355,20 +358,24 @@ p {
   border: 2px solid var(--primary);
   border-radius: 30px;
   padding: 8px 30px;
+  padding-top: 40px;
 }
 .section-title-five h2 {
   margin-bottom: 15px;
+  padding-top: 40px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-title-five h2 {
     font-size: 2rem;
     line-height: 2.8rem;
+    padding-top: 40px;
   }
 }
 @media (max-width: 767px) {
   .section-title-five h2 {
     font-size: 1.5rem;
     line-height: 1.9rem;
+    padding-top: 40px;
   }
 }
 .section-title-five p {

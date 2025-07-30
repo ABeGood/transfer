@@ -1,66 +1,37 @@
-/* Taxi PLUS section grid fixes */
-#services .container {
-    display: flex;
-    flex-direction: column;
-}
-
-#services .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-    /* Offset Bootstrap's padding */
-}
-
-#services .row .col-lg-4,
-#services .row .col-md-6 {
-    display: flex;
-    padding: 15px;
-    /* Restore Bootstrap padding */
-    margin-bottom: 30px;
-    /* Add consistent bottom margin */
-}
-
-/* Make all service cards the same height */
-#services .single-services {
+/* Unified Card Style - Used for both Pricing and Services cards */
+.unified-card {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 280px;
-    /* Set minimum height for consistency */
     background: #fff;
     border-radius: 10px;
-    padding: 30px 25px;
+    padding: 25px 30px; /* Balanced padding for both sections */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     border: 1px solid #f0f0f0;
+    text-align: center;
 }
 
-#services .single-services:hover {
+.unified-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Ensure service content fills the card properly */
-#services .service-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex-grow: 1;
-}
-
-#services .service-content h4 {
-    margin-bottom: 15px;
-    font-size: 20px;
+/* Card header/title styling */
+.unified-card .card-title {
+    font-size: 18px;
     font-weight: 600;
     color: #2c3e50;
-    line-height: 1.4;
+    margin-bottom: 15px;
     min-height: 50px;
-    /* Ensure title area is consistent */
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-#services .service-content p {
+/* Card content/description styling */
+.unified-card .card-content {
     flex-grow: 1;
     margin: 0;
     color: #6c757d;
@@ -68,33 +39,141 @@
     font-size: 15px;
     display: flex;
     align-items: flex-start;
+    text-align: center;
+}
+
+/* Pricing specific elements */
+.unified-card .price-badge {
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    padding: 8px 20px;
+    border: 2px solid #155bd5;
+    border-radius: 30px;
+    font-size: 16px;
+    background: transparent;
+}
+
+.unified-card .price-badge.featured {
+    background: #155bd5;
+    color: #fff;
+}
+
+.unified-card .price-display {
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.unified-card .price-amount {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 48px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.unified-card .price-currency {
+    font-weight: 500;
+    color: #6c757d;
+    font-size: 18px;
+    position: absolute;
+    left: -25px;
+    top: 6px;
+}
+
+.unified-card .price-duration {
+    font-size: 16px;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+/* Grid layout fixes */
+#services .container,
+#pricing .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#services .row,
+#pricing .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+#services .row .col-lg-4,
+#services .row .col-md-6,
+#pricing .row .col-lg-4,
+#pricing .row .col-md-6 {
+    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Section spacing */
+#services .section-title-five + .container,
+#pricing .section-title-five + .container {
+    margin-top: 50px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 991.98px) {
-    #services .single-services {
+    .unified-card {
         min-height: 250px;
+        padding: 20px 25px;
     }
 
-    #services .service-content h4 {
-        font-size: 18px;
-        min-height: 35px;
+    .unified-card .card-title {
+        font-size: 17px;
+        min-height: 45px;
+    }
+    
+    .unified-card .price-amount {
+        font-size: 42px;
+    }
+    
+    #services .row .col-lg-4,
+    #services .row .col-md-6,
+    #pricing .row .col-lg-4,
+    #pricing .row .col-md-6 {
+        margin-bottom: 10px;
+    }
+    
+    #services .section-title-five + .container,
+    #pricing .section-title-five + .container {
+        margin-top: 35px;
     }
 }
 
 @media (max-width: 767.98px) {
-    #services .single-services {
-        min-height: 200px;
-        padding: 15px 15;
+    .unified-card {
+        min-height: 220px;
+        padding: 18px 20px;
     }
 
-    #services .service-content h4 {
+    .unified-card .card-title {
         font-size: 16px;
         min-height: 40px;
         margin-bottom: 10px;
     }
 
-    #services .service-content p {
+    .unified-card .card-content {
         font-size: 14px;
+    }
+    
+    .unified-card .price-amount {
+        font-size: 38px;
+    }
+    
+    #services .row .col-lg-4,
+    #services .row .col-md-6,
+    #pricing .row .col-lg-4,
+    #pricing .row .col-md-6 {
+        margin-bottom: 8px;
+    }
+    
+    #services .section-title-five + .container,
+    #pricing .section-title-five + .container {
+        margin-top: 25px;
     }
 }

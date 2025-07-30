@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var header_navbar = document.querySelector(".navbar-area");
+    if (header_navbar) {
+        header_navbar.classList.add("sticky");
+    }
+});
+
 (function () {
 
     /*=====================================
@@ -7,13 +14,10 @@
         var header_navbar = document.querySelector(".navbar-area");
         var sticky = header_navbar.offsetTop;
 
-        if (window.pageYOffset > sticky) {
+        // Always keep sticky class for visibility
+        if (!header_navbar.classList.contains("sticky")) {
             header_navbar.classList.add("sticky");
-        } else {
-            header_navbar.classList.remove("sticky");
         }
-
-
 
         // show or hide the back-top-top button
         var backToTo = document.querySelector(".scroll-top");
@@ -51,10 +55,41 @@
     pageLink.forEach(elem => {
         elem.addEventListener('click', e => {
             e.preventDefault();
-            document.querySelector(elem.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth',
-                offsetTop: 1 - 60,
-            });
+
+            // Close mobile menu if open
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+                if (navbarToggler) {
+                    navbarToggler.classList.remove('active');
+                }
+            }
+
+            const targetId = elem.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+
+            if (targetElement) {
+                // Get navbar height
+                const navbar = document.querySelector('.navbar-area');
+                const navbarHeight = navbar.offsetHeight - 70;
+
+                // Adjust offset based on section - contact needs less offset
+                let offset = navbarHeight;
+                if (targetId === '#contact') {
+                    offset = navbarHeight + 70; // Less offset for contact
+                }
+
+                // Calculate target position
+                const targetPosition = targetElement.offsetTop - offset;
+
+                // Smooth scroll to position
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
