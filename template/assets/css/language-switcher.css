@@ -1,0 +1,46 @@
+/* Language switcher mobile fixes */
+.nav-item {
+    position: relative;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 991.98px) {
+    .navbar-collapse .nav-item {
+        position: static;
+    }
+
+    .language-dropdown {
+        position: static;
+        box-shadow: none !important;
+        padding-top: 0 !important;
+        margin-top: 10px;
+    }
+
+    .language-dropdown .sub-menu {
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .language-dropdown .sub-menu li a {
+        padding: 8px 0 !important;
+        color: #fff !important;
+        border-bottom: none !important;
+    }
+
+    .language-dropdown .sub-menu li a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .language-dropdown .sub-menu li a.active {
+        color: #155bd5 !important;
+    }
+}

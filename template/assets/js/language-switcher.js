@@ -31,7 +31,7 @@ const LanguageSwitcher = () => {
     const handleMouseLeave = () => {
         timeoutRef.current = setTimeout(() => {
             setIsOpen(false);
-        }, 300); // Small delay to prevent accidental closing
+        }, 300);
     };
 
     // Cleanup timeout on unmount
@@ -47,43 +47,40 @@ const LanguageSwitcher = () => {
     const currentLanguage = languages[currentLang] || languages.cs;
 
     return React.createElement(
-        'div',
+        'li',  // Changed from 'div' to 'li' to match other nav items
         {
-            className: 'nav-item relative',
+            className: 'nav-item',  // Removed 'relative' and custom positioning
             onMouseEnter: handleMouseEnter,
-            onMouseLeave: handleMouseLeave,
-            style: {
-                padding: '0 8px'  // Add padding to increase hit area
-            }
+            onMouseLeave: handleMouseLeave
         },
         [
             React.createElement(
                 'a',
                 {
                     href: '#',
-                    className: 'nav-link page-scroll',
+                    className: 'page-scroll',  // Match the class of other nav links
                     onClick: (e) => {
                         e.preventDefault();
                         setIsOpen(!isOpen);
                     },
                     style: {
-                        display: 'flex',
-                        alignItems: 'center',
-                        padding: '11px 16px',  // Increased padding for better hit area
                         cursor: 'pointer'
                     }
                 },
-                `🌐 ${currentLanguage}`
+                // `🌐 ${currentLanguage}`
+                `${currentLanguage}`
             ),
             isOpen && React.createElement(
                 'div',
                 {
+                    className: 'language-dropdown',  // Added specific class for styling
                     style: {
                         position: 'absolute',
                         top: '100%',
                         left: '0',
-                        paddingTop: '2px',  // Add gap between trigger and dropdown
-                        zIndex: 1000
+                        paddingTop: '2px',
+                        zIndex: 1000,
+                        minWidth: '150px'
                     }
                 },
                 React.createElement(
@@ -95,9 +92,9 @@ const LanguageSwitcher = () => {
                             background: 'white',
                             borderRadius: '5px',
                             padding: '10px 0',
-                            minWidth: '150px',
                             boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
-                            minHeight: 'fit-content',
+                            listStyle: 'none',
+                            margin: 0
                         }
                     },
                     Object.entries(languages).map(([code, label]) =>
@@ -106,7 +103,7 @@ const LanguageSwitcher = () => {
                             {
                                 key: code,
                                 style: {
-                                    borderBottom: '1px solid rgba(0,0,0,0.05)',
+                                    borderBottom: code === 'ru' ? 'none' : '1px solid rgba(0,0,0,0.05)'
                                 }
                             },
                             React.createElement(
@@ -115,21 +112,27 @@ const LanguageSwitcher = () => {
                                     href: '#',
                                     className: `nav-link ${currentLang === code ? 'active' : ''}`,
                                     style: {
-                                        padding: '12px 16px',  // Increased padding for better hit area
+                                        padding: '12px 16px',
                                         display: 'block',
                                         color: currentLang === code ? '#155bd5' : '#333',
                                         fontSize: '14px',
                                         transition: 'background-color 0.15s ease',
-                                        ':hover': {
-                                            backgroundColor: 'rgba(0,0,0,0.05)'
+                                        textDecoration: 'none'
+                                    },
+                                    onMouseEnter: (e) => {
+                                        if (currentLang !== code) {
+                                            e.target.style.backgroundColor = 'rgba(0,0,0,0.05)';
                                         }
+                                    },
+                                    onMouseLeave: (e) => {
+                                        e.target.style.backgroundColor = 'transparent';
                                     },
                                     onClick: (e) => {
                                         e.preventDefault();
                                         handleLanguageChange(code);
                                     }
                                 },
-                                `${code === 'en' ? '🇬🇧' : code === 'cs' ? '🇨🇿' : '🇷🇺'} ${label}`
+                                `${label}`
                             )
                         )
                     )

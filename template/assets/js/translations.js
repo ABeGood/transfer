@@ -300,12 +300,12 @@ const translations = {
 
 // Language handler function
 function handleLanguage() {
-    // Get language from URL parameter
+    // Get language from URL parameter, default to Czech
     const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || 'en'; // Default to English if no language specified
+    const lang = urlParams.get('lang') || 'cs'; // Changed from 'en' to 'cs'
 
     // Get translation for current language
-    const currentTranslations = translations[lang] || translations.en;
+    const currentTranslations = translations[lang] || translations.cs; // Changed fallback from translations.en to translations.cs
 
     // Update content
     function updateContent() {
