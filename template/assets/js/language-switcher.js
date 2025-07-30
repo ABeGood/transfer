@@ -78,7 +78,6 @@ const LanguageSwitcher = () => {
                         position: 'absolute',
                         top: '100%',
                         left: '0',
-                        paddingTop: '2px',
                         zIndex: 1000,
                         minWidth: '150px'
                     }

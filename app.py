@@ -23,10 +23,5 @@ def index():
                          current_lang=lang,
                          languages=LANGUAGES)
 
-# Special route to serve files from template root (if needed)
-@app.route('/template/<path:path>')
-def send_template(path):
-    return send_from_directory('template', path)
-
 if __name__ == '__main__':
     app.run(debug=True)
